@@ -1,0 +1,23 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 291px;
+  width: 327px;
+  margin: auto;
+}
+img {
+  height: 80px;
+  width: 80px;
+  margin: 25px;
+}
+p.heading-l {
+  color: var(--dark-grayish-violet);
+  margin: 10px;
+}
+button {
+  padding: 10px;
+  height: 53px;
+  width: 327px;
+}

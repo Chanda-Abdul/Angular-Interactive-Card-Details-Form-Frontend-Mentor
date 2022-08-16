@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  /* color: var(--very-dark-violet); */
+}
+
+:root {
+  --error-red: hsl(0, 100%, 66%);
+  --active-border-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+.body-s {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* color: var(--very-dark-violet); */
+}
+.body-m {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* color: var(--very-dark-violet); */
+}
+.body-l {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.heading-l {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+.heading-xl {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  text-transform: uppercase;
+  letter-spacing: 3.4px;
+  text-align: center;
+  letter-spacing: 3.4px;
+  color: var(--very-dark-violet);
+}
+
+button {
+  height: 53px;
+  width: 337px;
+  background-color: var(--very-dark-violet);
+  color: var(--neutral-white);
+  border-radius: 8px;
+  padding: 10px auto;
+  margin: 25px auto;
+  border: none;
+  cursor: pointer;
+}
+.alert {
+  color: var(--error-red);
+}
+button:hover {
+  background-color: var(--dark-grayish-violet);
+  color: var(--very-dark-violet);
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+}
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+ */

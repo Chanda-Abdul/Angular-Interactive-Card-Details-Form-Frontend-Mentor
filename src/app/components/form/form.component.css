@@ -1,0 +1,147 @@
+section {
+  margin: 100px auto;
+  width: 100%;
+  /* padding: auto; */
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  margin: 50px auto;
+  /* height: 328px; */
+  width: 327px;
+  /* color: var(--light-grayish-violet); */
+}
+label {
+  color: var(--very-dark-violet);
+  /* padding-top: 30px;
+  padding-bottom: 50px; */
+  /*  */
+}
+input{
+  /* margin: 40px 0 80px 0; */
+  border-radius: 8px;
+  background: var(--neutral-white);
+  border: 1px solid var(--light-grayish-violet);
+  /* color: var(--light-grayish-violet) !important; */
+  opacity: 50%;
+  /* padding: 0 2px; */
+}
+
+.form-control{
+  /* color: var(--light-grayish-violet) !important; */
+  margin: 5px 0 10px 0;
+}
+.form-control.large {
+  padding: 0 0 0 15px;
+  height: 45px;
+  width: 327px;
+
+}
+.form-control.medium {
+  padding: 0 0 0 10px;
+  height: 45px;
+  width: 164px;
+  border-radius: 8px;
+
+}
+.form-control.small {
+  padding: 0 0 0 10px;
+  margin: 5px 10px 10px 0;
+  height: 45px;
+  width: 52px;
+ 
+}
+.form-group-date {
+  width: 152px;
+  /* display: inline-block; */
+}
+.form-group-cid {
+  width: 164px;
+  /* display: inline-block; */
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  width: 327px;
+  height: 69px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+ border-left: 1px solid #42A948; 
+}
+
+.ng-touched > .ng-invalid:not(form) {
+  
+  /* border: 1px solid var(--error-red);  */
+  border-left: 1px solid var(--error-red); /* red */
+}
+/* Global Styles */
+
+/* h1 {
+    color: #264D73;
+    font-size: 2.5rem;
+  }
+  h2, h3 {
+    color: #444;
+    font-weight: lighter;
+  }
+  h3 {
+    font-size: 1.3rem;
+  } */
+/* body {
+    padding: .5rem;
+    max-width: 1000px;
+    margin: auto; */
+/* }
+  @media (min-width: 600px) {
+    body {
+      padding: 2rem;
+    }
+  } */
+/* input[text] {
+  color: #333;
+  height: 45px;
+  width: 327px;
+} */
+/* a {
+    cursor: pointer;
+  } */
+
+
+/* Navigation link styles */
+/* nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 4px;
+} */
+
+/* nav a:hover {
+  color: white;
+  background-color: #42545c;
+} */
+/* nav a.active {
+  background-color: black;
+  color: white;
+} */
+/* hr {
+  margin: 1.5rem 0;
+} */
+/* input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem;
+} */
+
+/*
+  Copyright Google LLC. All Rights Reserved.
+  Use of this source code is governed by an MIT-style license that
+  can be found in the LICENSE file at https://angular.io/license
+  */
