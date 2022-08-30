@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Card } from './card.model';
 
 
@@ -8,50 +9,55 @@ import { Card } from './card.model';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  userForm;
-  cardholder = new Card(18, '', '', '', '', '');
+  @ViewChild('f', { static: false }) cardholderForm: NgForm;
+  submitted = false;
 
-  submitted: boolean;
-
-
-  constructor() {
-    // super();private formBuilder: FormBuilder
-
+  cardholder = {
+    name: '',
+    number: '',
+    // date: {
+      month: '',
+      year: '',
+    // },
+    cid: ''
   }
+  currentCard: Card;
+  cardCollection: Card[] = [];
+
+
+
 
   ngOnInit(): void {
     this.submitted = false;
 
-    // console.log(this.submitted);
-    // this.initializeForm();
-    // console.log(this.cardholder);
+    console.log(this.cardCollection);
+
   }
 
-  // initializeForm(): void {
-  // this.userForm = this.formBuilder.group({
-  // userholderName: [],
-  // userNumber: [],
-  // expDate: [],
-  // cvc: [],
 
-  // }
-  // )
-  // }
   onSubmit() {
-  //  console.log(this.userForm);
-    console.log(this.cardholder.name); 
+    console.log(this.cardholderForm);
+
     this.submitted = true;
-    
-    this.SaveCardDetails(this.userForm)
+    this.SaveCardDetails();
+
+
   }
-  SaveCardDetails(form:any){
-    
-    this.cardholder = new Card(19, this.cardholder.name, '', '', '', '');
-    console.log(this.cardholder);
-    console.log(this.cardholder.name);
+  SaveCardDetails() {
+
+    /* extract form data form: any*/
+    this.cardholder.name = this.cardholderForm.value.name;
+    this.cardholder.number = this.cardholderForm.value.number;
+    this.cardholder.month = this.cardholderForm.value.month
+    this.cardholder.year = this.cardholderForm.value.notARealYear
+    this.cardholder.cid = this.cardholderForm.value.cid;
+
+    this.currentCard = new Card(19, this.cardholder.name, this.cardholder.number, this.cardholder.month, this.cardholder.year, this.cardholder.cid);
+    this.newCard();
   }
   newCard() {
-    this.cardholder = new Card(19, '', '', '', '', '');
+    this.cardCollection.push(this.currentCard)
+    console.log(this.currentCard)
   }
 
 }

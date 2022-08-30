@@ -30,35 +30,35 @@ input{
   /* padding: 0 2px; */
 }
 
-.form-control{
+.control{
   /* color: var(--light-grayish-violet) !important; */
   margin: 5px 0 10px 0;
 }
-.form-control.large {
+.control.large {
   padding: 0 0 0 15px;
   height: 45px;
   width: 327px;
 
 }
-.form-control.medium {
+.control.medium {
   padding: 0 0 0 10px;
   height: 45px;
   width: 164px;
   border-radius: 8px;
 
 }
-.form-control.small {
+.control.small {
   padding: 0 0 0 10px;
   margin: 5px 10px 10px 0;
   height: 45px;
   width: 52px;
- 
+
 }
-.form-group-date {
+.group-date {
   width: 152px;
   /* display: inline-block; */
 }
-.form-group-cid {
+.group-cid {
   width: 164px;
   /* display: inline-block; */
 }
@@ -70,14 +70,12 @@ input{
 }
 
 .ng-valid[required], .ng-valid.required  {
- border-left: 1px solid #42A948; 
+ border-left: 1px solid #42A948;
 }
+input.ng-invalid.ng-touched{
+  border: 1px solid var(--error-red)
+  }
 
-.ng-touched > .ng-invalid:not(form) {
-  
-  /* border: 1px solid var(--error-red);  */
-  border-left: 1px solid var(--error-red); /* red */
-}
 /* Global Styles */
 
 /* h1 {

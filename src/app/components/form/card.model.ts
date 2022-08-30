@@ -1,10 +1,9 @@
 export class Card {
-    constructor(
-        public id: number,
-        public name: string,
-        public notARealCard: string,
-        public notARealMth: string,
-        public notARealYr: string,
-        public cid: string,
-    ) { }
+  constructor(
+    public id: number,
+    public name: string,
+    number: string, month: string,
+    public year: string,
+    public cid: string,
+  ) { }
 }

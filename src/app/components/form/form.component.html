@@ -1,156 +1,128 @@
 <section>
-    <div [hidden]="submitted">
-        <form (ngSubmit)="onSubmit()"
-              #userForm="ngForm">
-            <div class="form-group">
-                <label for="name"
-                       class="body-m">Cardholder Name</label>
-                <input type="text"
-                       class="form-control large heading-l"
-                       id="name"
-                       required
-                       [(ngModel)]="cardholder.name"
-                       name="name"
-                       #name="ngModel"
-                       placeholder="e.g. Jane Appleseed">
-                <div [hidden]="name.valid || name.pristine"
-                     class="alert alert-danger">
-                    Name is required
-                </div>
+  <!-- <div class="row"
+       *ngIf="!submitted">
+    <div class="col-xs-12">
+      <h3>Your Data</h3>
+      <p>Name: {{ cardholder.name }} </p>
+      <p>number: {{ cardholder.number }} </p>
+      <p>month {{ cardholder.date.month }} </p>
+      <p>year: {{ cardholder.date.year }} </p>
+      <p>cid: {{ cardholder.cid }} </p>
+    </div>
+  </div>
+  <hr> -->
+  <div *ngIf="submitted">
+<app-confirmation>
 
-                <label for="notARealCard"
-                class="body-m">Card Number</label>
-         <input type="text"
-                class="form-control large heading-l"
-                id="notARealCard"
-                required
-                [(ngModel)]="cardholder.notARealCard"
-                notARealCard="notARealCard"
-                #notARealCard="ngModel"
-                placeholder="e.g. 1234 5678 9123 0000" [ngModelOptions]="{standalone: true}">
-         <!-- <div [hidden]="notARealCard.valid || notARealCard.pristine"
-              class="alert alert-danger">
-             Valid Card Number is required
-         </div> -->
-     </div>
-       
+  </app-confirmation>
+  </div>
 
-            <!-- <div class="form-group"> -->
 
-            <div class="row">
-                <div class="form-group-date">
-                    <label for="date"
-                           class="body-m"> Exp. Date (MM/YY)</label>
-                    <div class="input-group">
-                        <input type="text"
-                               class="form-control small heading-l"
-                               id="notARealMth"
-                               required
-                               [(ngModel)]="cardholder.notARealMth" [ngModelOptions]="{standalone: true}"
-                               notARealMth="notARealMth"
-                               #notARealMth="ngModel"
-                               placeholder="MM">
-                        <!-- <div [hidden]="notARealMth.valid || notARealMth.pristine"
+  <div *ngIf="!submitted">
+    <form (ngSubmit)="onSubmit()"
+          #f="ngForm">
+      <!-- <div id="cardholder-info"
+      ngModelGroup="cardholderInfo"
+             #cardholderInfo="ngModelGroup"> -->
+
+
+      <div class="form-group">
+        <label for="name"
+               class="body-m">Cardholder Name</label>
+        <input type="text"
+               class="control large heading-l"
+               id="name"
+               [(ngModel)]="cardholder.name"
+               name="name"
+               placeholder="e.g. Jane Appleseed"
+               required
+               #name="ngModel">
+        <span *ngIf="!name.valid && name.touched"
+              class="help-block alert alert-danger">Name is required</span>
+
+      </div>
+
+      <div class="form-group">
+        <label for="number"
+               class="body-m">Card Number</label>
+        <!-- TODO use one/two way binding to track keystroke -->
+        <input type="text"
+               class="control large heading-l"
+               id="number"
+               [(ngModel)]="cardholder.number"
+               name="number"
+               placeholder="e.g. 1234 5678 9123 0000"
+               required
+               minlength="16"
+               maxlength="16"
+               #number="ngModel">
+        <span *ngIf="!number.valid && number.touched"
+              class="help-block alert alert-danger">Plese enter a 16 digit Valid Card Number</span>
+
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="group-date">
+          <div id="cardholder-date"
+               ngModelGroup="cardholderDate"
+               #cardholderDate="ngModelGroup">
+            <label for="date"
+                   class="body-m"> Exp. Date (MM/YY)</label>
+            <div class="input-group">
+              <input type="text"
+                     class="control small heading-l"
+                     id="month"
+                     [(ngModel)]="cardholder.date.month"
+                     placeholder="MM"
+                     required
+                     name="month"
+                     #month="ngModel"
+                     >
+
+
+              <input type="text"
+                     class="control small heading-l"
+                     id="year"
+                     [(ngModel)]="cardholder.date.year"
+                     placeholder="YY"
+                     required
+                     name="year"
+                     #year="ngModel">
+              <!-- <div [hidden]="year.valid || year.pristine"
                      class="alert alert-danger">
                     Valid user Number is required
                 </div> -->
-                        <input type="text"
-                               class="form-control small heading-l"
-                               id="notARealYr"
-                               required
-                               [(ngModel)]="cardholder.notARealYr" 
-                               [ngModelOptions]="{standalone: true}"
-                               notARealYr="notARealYr"
-                               #notARealYr="ngModel" 
-                               placeholder="YY">
-                        <!-- <div [hidden]="notARealYr.valid || notARealYr.pristine"
-                     class="alert alert-danger">
-                    Valid user Number is required
-                </div> -->
-                    </div>
-
-                </div>
-                <div class="form-group-cid">
-                    <label for="cvc"
-                           class="body-m">CVC</label>
-                    <input type="text"
-                           class="form-control medium  heading-l"
-                           id="cid"
-                           required
-                           [(ngModel)]="cardholder.cid" [ngModelOptions]="{standalone: true}"
-                           cid="cid"
-                           #cid="ngModel" 
-                           placeholder="e.g. 123">
-                    <!-- <div [hidden]="cid.valid || cid.pristine"
-                     class="alert alert-danger">
-                    Valid user Number is required
-                </div> -->
-
-
-                </div>
             </div>
-            <button type="submit"
-                    class="heading-l"
-                    [disabled]="!userForm.form.valid"
-                    (click)="newCard(); userForm.reset()">Confirm</button>
-        </form>
+          </div>
+        </div>
 
-      
-
-    </div><app-confirmation [hidden]="!submitted"></app-confirmation>
-<!-- <div >
-            <h2>You submitted the following:</h2>
-            <div class="row">
-              <div class="col-xs-3">Name</div>
-              <div class="col-xs-9">{{ cardholder.name }}</div>
-            </div>
-          <div class="row">
-              <div class="col-xs-3">Alter Ego</div>
-              <div class="col-xs-9">{{ cardholder.alterEgo }}</div>
-            </div> -->
-            <!-- <div class="row">
-              <div class="col-xs-3">Power</div>
-              <div class="col-xs-9">{{ cardholder.power }}</div>
-            </div> 
-            <br>
-            <button type="button" class="btn btn-primary" (click)="submitted=false">Edit</button>
+        <div class="group-cid">
+          <label for="cvc"
+                 class="body-m">CVC</label>
+          <input type="text"
+                 class="control medium heading-l"
+                 id="cid"
+                 [(ngModel)]="cardholder.cid"
+                 placeholder="e.g. 123"
+                 required
+                 minlength="3"
+                 maxlength="3"
+                 name="cid"
+                 #cid="ngModel" />
+          <!-- <div [hidden]="cardholder.cid.valid || cardholder.cid.pristine" class="alert alert-danger">
+            Valid user Number is required
           </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <input type="text"
-             placeholder="Name"
-             formControlName="name"
-             class="element"> -->
-    <!-- TODO => add error message  "This field is required"/Please enter your name.-->
-    <!-- placeholder="Email"
-             formControlName="email"
-             class="element" -->
-    <!-- <input type="text"
-             > -->
-    <!-- TODO => add error message  "This field is required"-->
-    <!-- TODO => add error message when not formatted correctly should show "Please use a valid email address"-->
-    <!-- [disabled]="!userForm.valid" -->
-
-
-
-
-
+        </div>
+      </div>
+      <button type="submit"
+              class="heading-l"
+              [disabled]="!f.valid"
+              (click)="newCard()">
+        Confirm
+      </button>
+    </form>
+  </div>
 </section>
-{{cardholder.name}}
-{{cardholder.notARealCard}}
-{{cardholder.notARealMth}}
-{{cardholder.notARealYr}}
-{{cardholder.cid}}

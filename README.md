@@ -81,19 +81,25 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 ### Continued development
 
 <!-- Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect. -->
+- pass form data to header/card display
+- save to array/database of cards
+- add logo based on card type
+- add animations
 
 ### Useful resources
 
+
+- [Angular - The Complete Guide (2022 Edition)
+](https://www.udemy.com/course/the-complete-guide-to-angular-2/l) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [Building a template-driven form](https://angular.io/guide/forms) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
 - Frontend Mentor - [@Chanda-Abdul](https://www.frontendmentor.io/profile/Chanda-Abdul)
 - Website - [Chanda Codes](https://chandacodes.com/)
 - GitHub - [github.com/Chanda-Abdul](https://github.com/Chanda-Abdul)
-<!-- ## Acknowledgments
-
+ ## Acknowledgments
+<!--
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit. -->
 
 
