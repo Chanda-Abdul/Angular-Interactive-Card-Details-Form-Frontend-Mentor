@@ -48,9 +48,10 @@ Users should be able to:
 ### Built with
 
 - <b>[Angular](https://angular.io/)</b> (<b>JavaScript</b> framework)
-  - Template Driven Forms
-  - TypeScript
-  - JavaScript
+  - [Angular Template Driven Forms](https://angular.io/guide/forms)
+  - [Angular Reactive Forms](https://angular.io/guide/reactive-forms)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [JavaScript](https://www.javascript.com/)
 - <b>CSS</b> custom properties
   - <b>Mobile-first</b> workflow
 - Semantic <b>HTML5</b> markup
@@ -81,17 +82,17 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 ### Continued development
 
 <!-- Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect. -->
-- pass form data to header/card display
-- save to array/database of cards
-- add logo based on card type
-- add animations
+- [ ] pass form data to header/card display
+- [ ] save cardholder data to array/database of cards
+- [ ] add logo based on card type
+- [ ] add animations
 
 ### Useful resources
 
-
-- [Angular - The Complete Guide (2022 Edition)
-](https://www.udemy.com/course/the-complete-guide-to-angular-2/l) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Angular - The Complete Guide (2022 Edition) by Maximilian Schwarzmüller](https://www.udemy.com/course/the-complete-guide-to-angular-2) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [Building a template-driven form](https://angular.io/guide/forms) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Introduction to forms in Angular](https://angular.io/guide/forms-overview) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Reactive forms](https://angular.io/guide/reactive-forms) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 
 ## Author
 
