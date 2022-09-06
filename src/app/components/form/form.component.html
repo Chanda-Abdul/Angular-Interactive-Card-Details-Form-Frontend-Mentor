@@ -3,126 +3,150 @@
        *ngIf="!submitted">
     <div class="col-xs-12">
       <h3>Your Data</h3>
-      <p>Name: {{ cardholder.name }} </p>
+      <p>Name: {{ cardholder.name}} </p>
       <p>number: {{ cardholder.number }} </p>
-      <p>month {{ cardholder.date.month }} </p>
-      <p>year: {{ cardholder.date.year }} </p>
+      <p>month {{ cardholder.month }} </p>
+      <p>year: {{ cardholder.year }} </p>
       <p>cid: {{ cardholder.cid }} </p>
     </div>
   </div>
   <hr> -->
-  <div *ngIf="submitted">
-<app-confirmation>
-
-  </app-confirmation>
-  </div>
 
 
+  <!-- cardholderForm -->
   <div *ngIf="!submitted">
     <form (ngSubmit)="onSubmit()"
           #f="ngForm">
-      <!-- <div id="cardholder-info"
-      ngModelGroup="cardholderInfo"
-             #cardholderInfo="ngModelGroup"> -->
-
-
-      <div class="form-group">
-        <label for="name"
-               class="body-m">Cardholder Name</label>
-        <input type="text"
-               class="control large heading-l"
-               id="name"
-               [(ngModel)]="cardholder.name"
-               name="name"
-               placeholder="e.g. Jane Appleseed"
-               required
-               #name="ngModel">
-        <span *ngIf="!name.valid && name.touched"
-              class="help-block alert alert-danger">Name is required</span>
-
-      </div>
-
-      <div class="form-group">
-        <label for="number"
-               class="body-m">Card Number</label>
-        <!-- TODO use one/two way binding to track keystroke -->
-        <input type="text"
-               class="control large heading-l"
-               id="number"
-               [(ngModel)]="cardholder.number"
-               name="number"
-               placeholder="e.g. 1234 5678 9123 0000"
-               required
-               minlength="16"
-               maxlength="16"
-               #number="ngModel">
-        <span *ngIf="!number.valid && number.touched"
-              class="help-block alert alert-danger">Plese enter a 16 digit Valid Card Number</span>
-
-      </div>
-
-
-
-
-      <div class="row">
-        <div class="group-date">
+      <div id="cardholder-info"
+           ngModelGroup="cardholderInfo"
+           #cardholderInfo="ngModelGroup">
+        <!-- name input  -->
+        <div class="form-group">
+          <label for="name"
+                 class="body-m">Cardholder Name</label>
+          <input type="text"
+                 id="name"
+                 class="control large heading-l"
+                 [(ngModel)]="cardholder.name"
+                 name="name"
+                 placeholder="e.g. Jane Appleseed"
+                 required
+                 #name="ngModel"
+                 minlength="6">
+          <!-- TO DO => add regex for letters only pattern="^[a-zA-Z]*$" -->
+          <span *ngIf="!name.valid && name.touched"
+                class="help-block alert alert-danger">Name is required</span>
+        </div>
+        <!-- card number input  -->
+        <div class="form-group">
+          <label for="number"
+                 class="body-m">Card Number</label>
+          <input type="text"
+                 id="number"
+                 class="control large heading-l"
+                 [(ngModel)]="cardholder.number"
+                 name="number"
+                 placeholder="e.g. 1234 5678 9123 0000"
+                 required
+                 minlength="16"
+                 maxlength="16"
+                 pattern="^[0-9]*$"
+                 #number="ngModel">
+          <span *ngIf="!number.valid && number.touched"
+                class="help-block alert alert-danger">Plese enter a 16 digit Valid Card Number</span>
+        </div>
+        <!--
+          TO DO - OPTIONAL
+          => create form date group
           <div id="cardholder-date"
-               ngModelGroup="cardholderDate"
-               #cardholderDate="ngModelGroup">
+          ngModelGroup="cardholderDate"
+          #cardholderDate="ngModelGroup">
+        </div>
+      -->
+
+        <!-- date inputs  -->
+        <div class="row">
+          <div class="form-group-date">
             <label for="date"
                    class="body-m"> Exp. Date (MM/YY)</label>
+            <!-- month input  -->
             <div class="input-group">
               <input type="text"
-                     class="control small heading-l"
                      id="month"
-                     [(ngModel)]="cardholder.date.month"
+                     class="control small heading-l"
+                     [(ngModel)]="cardholder.month"
+                     name="month"
                      placeholder="MM"
                      required
-                     name="month"
+                     month
                      #month="ngModel"
-                     >
-
-
+                     pattern="^[0-1][0-9]"
+                     minlength="2"
+                     maxlength="2">
+              <!-- year input  -->
               <input type="text"
-                     class="control small heading-l"
                      id="year"
-                     [(ngModel)]="cardholder.date.year"
+                     class="control small heading-l"
+                     [(ngModel)]="cardholder.year"
+                     name="year"
                      placeholder="YY"
                      required
-                     name="year"
-                     #year="ngModel">
-              <!-- <div [hidden]="year.valid || year.pristine"
-                     class="alert alert-danger">
-                    Valid user Number is required
-                </div> -->
+                     year
+                     #year="ngModel"
+                     minlength="2"
+                     maxlength="2"
+                     pattern="^[2][0-9]">
             </div>
+
+          </div>
+          <!-- cc id input -->
+          <div class="group-cid">
+            <label for="cvc"
+                   class="body-m">CVC</label>
+            <input type="text"
+                   class="control medium heading-l"
+                   id="cid"
+                   [(ngModel)]="cardholder.cid"
+                   placeholder="e.g. 123"
+                   required
+                   minlength="3"
+                   maxlength="3"
+                   name="cid"
+                   #cid="ngModel"
+                   pattern="^[0-9][0-9][0-9]" />
           </div>
         </div>
+        <div *ngIf="!month.valid && month.touched"> <span class="help-block alert alert-danger">
+            Please enter a valid month
+          </span><br></div>
+        <div *ngIf="!year.valid && year.touched"><span class="help-block alert alert-danger">
+            Please enter a valid year
+          </span><br></div>
+        <div *ngIf="!cid.valid && cid.touched"><span class="help-block alert alert-danger">
+            Valid CVC is required
+          </span></div>
 
-        <div class="group-cid">
-          <label for="cvc"
-                 class="body-m">CVC</label>
-          <input type="text"
-                 class="control medium heading-l"
-                 id="cid"
-                 [(ngModel)]="cardholder.cid"
-                 placeholder="e.g. 123"
-                 required
-                 minlength="3"
-                 maxlength="3"
-                 name="cid"
-                 #cid="ngModel" />
-          <!-- <div [hidden]="cardholder.cid.valid || cardholder.cid.pristine" class="alert alert-danger">
-            Valid user Number is required
-          </div> -->
-        </div>
       </div>
       <button type="submit"
               class="heading-l"
-              [disabled]="!f.valid"
-              (click)="newCard()">
+              [disabled]="!f.valid">
         Confirm
       </button>
     </form>
+  </div>
+  <!-- display form confirmation screen -->
+  <div *ngIf="submitted">
+    <section>
+      <!-- TO DO
+        => OPTIONAL move this to <app-confirmation></app-confirmation>
+      -->
+      <img src="../../../assets/images/icon-complete.svg" />
+      <p class="heading-xl">
+        Thank you!</p>
+      <p class="heading-l">We've added your card details</p>
+      <button class="heading-l"
+              (click)="onFormReset()">Continue</button>
+    </section>
+
   </div>
 </section>

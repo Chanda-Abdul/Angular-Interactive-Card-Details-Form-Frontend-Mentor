@@ -1,6 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
+/*
+
+TO DO
+=> View the optimal layout depending on their device's screen size
+    - mobile
+    - tablet
+    - desktop
+
+*/
 * {
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;

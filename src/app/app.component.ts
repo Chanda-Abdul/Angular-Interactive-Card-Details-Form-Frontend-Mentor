@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular interactive card details form';
+
+  items = [];
+
+  addNewFormItem(newFormItem: string) {
+    this.items.push(newFormItem);
+  }
 }

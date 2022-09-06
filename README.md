@@ -81,7 +81,25 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
-<!-- Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect. -->
+  <!-- TO DO =>
+
+  - OPTIONAL - create date form group
+ 
+    - OPTIONAL - save form values to a collection/data structure
+  - Update the inputs on the form as the user fills in the fields
+  and see the card details update in real-time
+
+- Reset the form when the user clicks "Continue" on the completed state(timeout?)
+- See
+  - hover,
+  - active, and
+  - focus states for interactive elements on the page
+- OPTIONAL - add logo based on card type
+- OPTIONAL - add animations
+- View the optimal layout depending on their device's screen size
+    - mobile
+    - tablet
+    - desktop -->
 - [ ] pass form data to header/card display
 - [ ] save cardholder data to array/database of cards
 - [ ] add logo based on card type
@@ -91,6 +109,7 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 - [Angular - The Complete Guide (2022 Edition) by Maximilian Schwarzmüller](https://www.udemy.com/course/the-complete-guide-to-angular-2) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [Building a template-driven form](https://angular.io/guide/forms) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Pattern Validator](https://angular.io/api/forms/PatternValidator) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Introduction to forms in Angular](https://angular.io/guide/forms-overview) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [Reactive forms](https://angular.io/guide/reactive-forms) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 

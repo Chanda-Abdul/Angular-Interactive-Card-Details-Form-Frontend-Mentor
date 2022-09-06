@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Card } from './card.model';
 
@@ -9,55 +9,79 @@ import { Card } from './card.model';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  @ViewChild('f', { static: false }) cardholderForm: NgForm;
-  submitted = false;
+  /*
+    TO DO =>
+    - OPTIONAL - create date form group
+    - OPTIONAL - save form values to a collection/data structure
+    - Update the inputs on the form as the cardholder fills in the fields
+        and see the card details update in real-time
+    - OPTIONAL - when the cardholder clicks "Continue" navigate to confirmation component and back
+      - See
+        - hover,
+        - active, and
+        - focus states for interactive elements on the page
+      - OPTIONAL - add logo based on card type
+      - OPTIONAL - add animations
+      - fix favicon
+      - View the optimal layout depending on their device's screen size
+          - mobile
+          - tablet
+          - desktop
+    */
 
+
+  @ViewChild('f', { static: false }) cardholderForm: NgForm;
+  @Output() newFormItemEvent = new EventEmitter<string>();
+
+  //1111222233334444
   cardholder = {
     name: '',
     number: '',
     // date: {
-      month: '',
-      year: '',
+    month: '',
+    year: '',
     // },
     cid: ''
   }
-  currentCard: Card;
-  cardCollection: Card[] = [];
+  // currentCard: Card;
+  // cardCollection: Card[] = [];
+  submitted = false;
 
-
-
+  addNewFormItem(value: string) {
+    this.newFormItemEvent.emit(this.cardholder.name);
+  }
 
   ngOnInit(): void {
     this.submitted = false;
-
-    console.log(this.cardCollection);
-
+    // console.log(this.cardCollection);
   }
 
 
   onSubmit() {
-    console.log(this.cardholderForm);
-
     this.submitted = true;
-    this.SaveCardDetails();
+    console.log(this.cardholder);
 
-
-  }
-  SaveCardDetails() {
-
-    /* extract form data form: any*/
+    /* extract form data */
     this.cardholder.name = this.cardholderForm.value.name;
     this.cardholder.number = this.cardholderForm.value.number;
-    this.cardholder.month = this.cardholderForm.value.month
-    this.cardholder.year = this.cardholderForm.value.notARealYear
+    this.cardholder.month = this.cardholderForm.value.month;
+    this.cardholder.year = this.cardholderForm.value.year;
     this.cardholder.cid = this.cardholderForm.value.cid;
 
-    this.currentCard = new Card(19, this.cardholder.name, this.cardholder.number, this.cardholder.month, this.cardholder.year, this.cardholder.cid);
-    this.newCard();
+    console.log(this.cardholderForm.value.cardholderInfo);
+    // this.SaveCardDetails();
   }
-  newCard() {
-    this.cardCollection.push(this.currentCard)
-    console.log(this.currentCard)
+  onFormReset() {
+    /* reset form */
+    this.submitted = false;
+    this.cardholderForm.reset();
   }
+
+  // saveNewCardDetails() {
+  //   this.currentCard = new Card(19, this.cardholder.name, this.cardholder.number, this.cardholder.month, this.cardholder.year, this.cardholder.cid);
+  //   this.newCard();
+  //   this.cardCollection.push(this.currentCard)
+  //   console.log(this.currentCard)
+  // }
 
 }
