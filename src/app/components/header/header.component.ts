@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CardService } from 'src/app/card.service';
 
 
 @Component({
@@ -7,17 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  cid = '123';
-  number = ['0000', '1111', '0000', '2222'];
-  month = '08';
-  year = '22';
-  name = 'Jane Appleseed'
-  logo = '';
+@Input() currentCard ;
 
+name:string = 'Jane Appleseed';
+cid:string = '123';
+number:any = ['9876', '1234', '5544', '6543'];
+month:string = '09';
+year:string = '22';
 
-  constructor() { }
+logo = '';
 
-  ngOnInit(): void {
+constructor(private cardservice: CardService) { }
+
+ngOnInit(): void {
+
   }
 
 }

@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormComponent } from './components/form/form.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { CardService } from './card.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     CommonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

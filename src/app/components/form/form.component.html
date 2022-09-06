@@ -1,20 +1,7 @@
 <section>
-  <!-- <div class="row"
-       *ngIf="!submitted">
-    <div class="col-xs-12">
-      <h3>Your Data</h3>
-      <p>Name: {{ cardholder.name}} </p>
-      <p>number: {{ cardholder.number }} </p>
-      <p>month {{ cardholder.month }} </p>
-      <p>year: {{ cardholder.year }} </p>
-      <p>cid: {{ cardholder.cid }} </p>
-    </div>
-  </div>
-  <hr> -->
-
-
-  <!-- cardholderForm -->
+  <!-- cardholderForm-->
   <div *ngIf="!submitted">
+
     <form (ngSubmit)="onSubmit()"
           #f="ngForm">
       <div id="cardholder-info"
@@ -32,8 +19,9 @@
                  placeholder="e.g. Jane Appleseed"
                  required
                  #name="ngModel"
-                 minlength="6">
-          <!-- TO DO => add regex for letters only pattern="^[a-zA-Z]*$" -->
+                 minlength="6"
+                 pattern="^[\w'\-,.]*[^_!¡?÷?¿\/\\+=@#$%ˆ&*(){}|~<>;:[\]]*$"
+                 (keyup)="addNewInfo(cardholder)">
           <span *ngIf="!name.valid && name.touched"
                 class="help-block alert alert-danger">Name is required</span>
         </div>
@@ -50,14 +38,26 @@
                  required
                  minlength="16"
                  maxlength="16"
-                 pattern="^[0-9]*$"
-                 #number="ngModel">
+                 pattern="^6011-?\d{4}-?\d{4}-?\d{4}$ || (^3[0-9]{15}$)|(^(2131|1800)[0-9]{11}$) || ^[34|37][0-9]{14}$ || (^30[0-5][0-9]{11}$)|(^(36|38)[0-9]{12}$) || ^4[0-9]{6,}$ || (?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}"
+                 #number="ngModel"
+                 (keyup)="addNewInfo(cardholder)">
           <span *ngIf="!number.valid && number.touched"
                 class="help-block alert alert-danger">Plese enter a 16 digit Valid Card Number</span>
         </div>
         <!--
+          Regex for Leading Card Networks
+          Master Card(2-Bin, 5-Bin both):"(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}"
+          Visa: "^4[0-9]{6,}$"
+          Diner's Club: "(^30[0-5][0-9]{11}$)|(^(36|38)[0-9]{12}$)"
+          American Express: "^[34|37][0-9]{14}$"
+          JCB: "(^3[0-9]{15}$)|(^(2131|1800)[0-9]{11}$)"
+          Discover: "^6011-?\d{4}-?\d{4}-?\d{4}$"
+         -->
+
+         
+        <!--
           TO DO - OPTIONAL
-          => create form date group
+          => create form date group^[0-9]*$ ||
           <div id="cardholder-date"
           ngModelGroup="cardholderDate"
           #cardholderDate="ngModelGroup">
@@ -82,7 +82,8 @@
                      #month="ngModel"
                      pattern="^[0-1][0-9]"
                      minlength="2"
-                     maxlength="2">
+                     maxlength="2"
+                     (keyup)="addNewInfo(cardholder)">
               <!-- year input  -->
               <input type="text"
                      id="year"
@@ -95,9 +96,9 @@
                      #year="ngModel"
                      minlength="2"
                      maxlength="2"
-                     pattern="^[2][0-9]">
+                     pattern="[2][2-8]"
+                     (keyup)="addNewInfo(cardholder)">
             </div>
-
           </div>
           <!-- cc id input -->
           <div class="group-cid">
@@ -113,7 +114,8 @@
                    maxlength="3"
                    name="cid"
                    #cid="ngModel"
-                   pattern="^[0-9][0-9][0-9]" />
+                   pattern="^[0-9][0-9][0-9]"
+                   (keyup)="addNewInfo(cardholder)" />
           </div>
         </div>
         <div *ngIf="!month.valid && month.touched"> <span class="help-block alert alert-danger">

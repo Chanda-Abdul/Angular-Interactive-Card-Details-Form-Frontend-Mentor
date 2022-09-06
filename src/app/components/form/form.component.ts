@@ -1,21 +1,28 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { FormGroup, NgForm } from '@angular/forms';
 import { Card } from './card.model';
 
+export interface CardholderData {
+  name: string
+  number: string
+  // date: {
+  month: string
+  year: string
+  // },
+  cid: ''
+}
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent {
+export class FormComponent implements OnInit {
   /*
     TO DO =>
     - OPTIONAL - create date form group
     - OPTIONAL - save form values to a collection/data structure
-    - Update the inputs on the form as the cardholder fills in the fields
-        and see the card details update in real-time
-    - OPTIONAL - when the cardholder clicks "Continue" navigate to confirmation component and back
+    - OPTIONAL - reset when the cardholder clicks "Continue" navigate to confirmation component and back
       - See
         - hover,
         - active, and
@@ -31,8 +38,10 @@ export class FormComponent {
 
 
   @ViewChild('f', { static: false }) cardholderForm: NgForm;
-  @Output() newFormItemEvent = new EventEmitter<string>();
+  @Output() newFormEvent: EventEmitter<any> = new EventEmitter<any>();
+  submitted = false;
 
+  constructor(){}
   //1111222233334444
   cardholder = {
     name: '',
@@ -45,17 +54,18 @@ export class FormComponent {
   }
   // currentCard: Card;
   // cardCollection: Card[] = [];
-  submitted = false;
 
-  addNewFormItem(value: string) {
-    this.newFormItemEvent.emit(this.cardholder.name);
-  }
+
 
   ngOnInit(): void {
     this.submitted = false;
     // console.log(this.cardCollection);
   }
+addNewInfo(info: any){
 
+  this.newFormEvent.emit(info)
+
+}
 
   onSubmit() {
     this.submitted = true;

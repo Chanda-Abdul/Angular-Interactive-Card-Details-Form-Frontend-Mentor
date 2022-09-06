@@ -1,3 +1,3 @@
-<app-header></app-header>
-<app-form  (newFormItemEvent)="addNewFormItem($event)"></app-form>
+<app-header [currentCard]="currentCard"></app-header>
+<app-form (newFormEvent)="addNewInfo($event)"></app-form>
 <app-footer></app-footer>

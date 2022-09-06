@@ -1,26 +1,31 @@
 <div class="banner">
-    <div class="card back">
-        <div class="cid">{{cid}}</div>
+  <div class="card back">
+    <div class="cid">{{currentCard.currentCID || cid}}</div>
+  </div>
+  <div class="card front">
+    <div class="content"[ngSwitch]="currentCard.currentNumber.slice(0,1)">
+      <img src="../../../assets/images/visa.svg"
+           class="logo" *ngSwitchCase="'4'"/>
+           <img src="../../../assets/images/american-express.svg"
+           class="logo" *ngSwitchCase="'3'"/>
+           <img src="../../../assets/images/mastercard.svg"
+           class="logo" *ngSwitchCase="'5'"/>
+           <img src="../../../assets/images/discover-card.svg"
+           class="logo" *ngSwitchCase="'6'"/>
+      <img src="../../../assets/images/card-logo.svg"
+           class="logo" *ngSwitchDefault/>
+      <div class="number">
+        {{currentCard.currentNumber.slice(0,4) || number[0]}}
+        {{currentCard.currentNumber.slice(4,8) || number[1]}}
+        {{currentCard.currentNumber.slice(8,12) || number[2]}}
+        {{currentCard.currentNumber.slice(12,16) || number[3]}}
+      </div>
+      <div class="customer">
+        <div class="name">{{currentCard.currentName || name}}</div>
+        <div class="date">{{currentCard.currentMonth || month}}/{{currentCard.currentYear || year}}</div>
+      </div>
+
     </div>
-    <div class="card front">
-        <div class="content">
-            <img src="../../../assets/images/card-logo.svg"
-                 class="logo" />
-            <div class="number">{{number[0]}} {{number[1]}} {{number[2]}} {{number[3]}}
-            </div>
-            <div class="customer">
-                <div class="name">{{name}}</div>
-                <div class="date">{{month}}/{{year}}</div>
-            </div>
 
-        </div>
-
-    </div>
-
-
-
-
-
-
-
+  </div>
 </div>
