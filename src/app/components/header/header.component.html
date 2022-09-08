@@ -1,31 +1,59 @@
 <div class="banner">
-  <div class="card back">
-    <div class="cid">{{currentCard.currentCID || cid}}</div>
-  </div>
-  <div class="card front">
-    <div class="content"[ngSwitch]="currentCard.currentNumber.slice(0,1)">
-      <img src="../../../assets/images/visa.svg"
-           class="logo" *ngSwitchCase="'4'"/>
-           <img src="../../../assets/images/american-express.svg"
-           class="logo" *ngSwitchCase="'3'"/>
-           <img src="../../../assets/images/mastercard.svg"
-           class="logo" *ngSwitchCase="'5'"/>
-           <img src="../../../assets/images/discover-card.svg"
-           class="logo" *ngSwitchCase="'6'"/>
-      <img src="../../../assets/images/card-logo.svg"
-           class="logo" *ngSwitchDefault/>
-      <div class="number">
-        {{currentCard.currentNumber.slice(0,4) || number[0]}}
-        {{currentCard.currentNumber.slice(4,8) || number[1]}}
-        {{currentCard.currentNumber.slice(8,12) || number[2]}}
-        {{currentCard.currentNumber.slice(12,16) || number[3]}}
-      </div>
-      <div class="customer">
-        <div class="name">{{currentCard.currentName || name}}</div>
-        <div class="date">{{currentCard.currentMonth || month}}/{{currentCard.currentYear || year}}</div>
-      </div>
+  <div class="container">
 
+    <div class="card back">
+      <!-- display real-time user input for card security code -->
+      <div class="cid">{{currentCard.currentCID || cid}}</div>
+
+      <div class="card front">
+        <!-- card logo based on first digit of input -->
+        <div class="content"
+             [ngSwitch]="currentCard.currentNumber.slice(0,1)">
+
+          <!-- display visa logo -->
+          <img src="../../../assets/images/visa.svg"
+               class="logo"
+               *ngSwitchCase="'4'" />
+
+          <!-- OR display amex logo logo -->
+          <img src="../../../assets/images/american-express.svg"
+               class="logo"
+               *ngSwitchCase="'3'" />
+
+          <!-- OR display mastercard logo -->
+          <img src="../../../assets/images/mastercard.svg"
+               class="logo"
+               *ngSwitchCase="'5'" />
+
+          <!-- OR display discover logo  -->
+          <img src="../../../assets/images/discover-card.svg"
+               class="logo"
+               *ngSwitchCase="'6'" />
+
+          <!-- OR display default logo -->
+          <img src="../../../assets/images/card-logo.svg"
+               class="logo"
+               *ngSwitchDefault />
+
+          <!-- display real-time user input for card number 4 numbers at a time -->
+          <div class="number">
+            {{currentCard.currentNumber.slice(0,4)|| '0000'}}
+            {{currentCard.currentNumber.slice(4,8)|| '0000'}}
+            {{currentCard.currentNumber.slice(8,12)|| '0000'}}
+            {{currentCard.currentNumber.slice(12,16)|| '0000'}}
+          </div>
+
+
+          <div class="customer">
+
+            <!-- display real-time user input for cardholder name -->
+            <div class="name">{{currentCard.currentName || name}}</div>
+
+            <!-- display real-time user input for month and year -->
+            <div class="date">{{currentCard.currentMonth || month}}/{{currentCard.currentYear || year}}</div>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
 </div>

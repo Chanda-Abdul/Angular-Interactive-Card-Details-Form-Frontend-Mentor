@@ -8,7 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormComponent } from './components/form/form.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
-import { CardService } from './card.service';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { CardService } from './card.service';
     CommonModule,
     FormsModule
   ],
-  providers: [CardService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

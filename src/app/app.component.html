@@ -1,3 +1,11 @@
-<app-header [currentCard]="currentCard"></app-header>
-<app-form (newFormEvent)="addNewInfo($event)"></app-form>
+<div class="container">
+
+  <app-header [currentCard]="currentCard"></app-header>
+  <div class='right'>
+
+    <app-form (newFormEvent)="addNewInfo($event)"></app-form>
+    
+  </div>
+</div>
+
 <app-footer></app-footer>

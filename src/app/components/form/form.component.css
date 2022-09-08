@@ -1,7 +1,6 @@
 section {
-  margin: 100px auto;
+  margin-top: 100px;
   width: 100%;
-  /* padding: auto; */
 }
 form {
   display: flex;
@@ -9,71 +8,91 @@ form {
   align-items: center;
   justify-content: space-between;
   padding: 25px;
-  margin: 50px auto;
-  /* height: 328px; */
+  margin: 25px auto;
   width: 327px;
-  /* color: var(--light-grayish-violet); */
 }
 label {
+  margin-top: 20px;
+  padding: 5px;
   color: var(--very-dark-violet);
-  /* padding-top: 30px;
-  padding-bottom: 50px; */
-  /*  */
+  padding-top: 30px;
 }
-input{
-  /* margin: 40px 0 80px 0; */
+input {
   border-radius: 8px;
   background: var(--neutral-white);
   border: 1px solid var(--light-grayish-violet);
-  /* color: var(--light-grayish-violet) !important; */
-  opacity: 50%;
-  /* padding: 0 2px; */
+  padding: 0 2px;
 }
 
-.control{
-  /* color: var(--light-grayish-violet) !important; */
-  margin: 5px 0 10px 0;
+.control {
+  margin: 10px auto 15px auto;
 }
 .control.large {
-  padding: 0 0 0 15px;
+  padding: 0 0 0 10px;
   height: 45px;
   width: 327px;
-
 }
 .control.medium {
   padding: 0 0 0 10px;
   height: 45px;
   width: 164px;
   border-radius: 8px;
-
 }
 .control.small {
   padding: 0 0 0 10px;
-  margin: 5px 10px 10px 0;
+  margin: 10px 15px 15px 0;
   height: 45px;
   width: 52px;
-
 }
 .group-date {
   width: 152px;
-  /* display: inline-block; */
 }
 .group-cid {
   width: 164px;
-  /* display: inline-block; */
 }
-.row{
+.row {
   display: flex;
   justify-content: space-between;
   width: 327px;
-  height: 69px;
+}
+span{
+  margin: 5px 0;
+}
+input:focus {
+  border-color: #42a948;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 2px solid #42a948;
 }
 
-.ng-valid[required], .ng-valid.required  {
- border-left: 1px solid #42A948;
+input.ng-invalid.ng-touched {
+  border-color: var(--error-red);
+  border: 1px solid var(--error-red);
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
 }
-input.ng-invalid.ng-touched{
-  border: 1px solid var(--error-red)
-  }
+
+/* confirmation */
+.confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 291px;
+  width: 100%;
+  margin: 50px 0;
+}
+img {
+  height: 80px;
+  width: 80px;
+  margin: 25px;
+}
+p.heading-l {
+  color: var(--dark-grayish-violet);
+  margin: 10px;
+}
 
 

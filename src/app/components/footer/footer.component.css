@@ -1,2 +1,14 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+a {
+  color: hsl(228, 45%, 44%);
+  font-size: 11px;
+}
+
+@media screen and (min-width: 1175px) {
+  .attribution {
+    text-align: right;
+  }
+}

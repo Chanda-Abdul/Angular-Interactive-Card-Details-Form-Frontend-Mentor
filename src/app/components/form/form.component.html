@@ -1,12 +1,13 @@
 <section>
-  <!-- cardholderForm-->
-  <div *ngIf="!submitted">
 
+  <!-- template driven cardholderForm-->
+  <div *ngIf="!submitted">
     <form (ngSubmit)="onSubmit()"
           #f="ngForm">
       <div id="cardholder-info"
            ngModelGroup="cardholderInfo"
            #cardholderInfo="ngModelGroup">
+
         <!-- name input  -->
         <div class="form-group">
           <label for="name"
@@ -23,8 +24,9 @@
                  pattern="^[\w'\-,.]*[^_!¡?÷?¿\/\\+=@#$%ˆ&*(){}|~<>;:[\]]*$"
                  (keyup)="addNewInfo(cardholder)">
           <span *ngIf="!name.valid && name.touched"
-                class="help-block alert alert-danger">Name is required</span>
+                class="help-block alert alert-danger body-s">Name is required</span>
         </div>
+
         <!-- card number input  -->
         <div class="form-group">
           <label for="number"
@@ -42,7 +44,9 @@
                  #number="ngModel"
                  (keyup)="addNewInfo(cardholder)">
           <span *ngIf="!number.valid && number.touched"
-                class="help-block alert alert-danger">Plese enter a 16 digit Valid Card Number</span>
+                class="help-block alert alert-danger body-s">Please enter a Valid Card Number.<br> <i>Visa, Discover,
+              MasterCard, American
+              Express, JCB or Diner's Club</i> <br></span>
         </div>
         <!--
           Regex for Leading Card Networks
@@ -53,22 +57,12 @@
           JCB: "(^3[0-9]{15}$)|(^(2131|1800)[0-9]{11}$)"
           Discover: "^6011-?\d{4}-?\d{4}-?\d{4}$"
          -->
-
-         
-        <!--
-          TO DO - OPTIONAL
-          => create form date group^[0-9]*$ ||
-          <div id="cardholder-date"
-          ngModelGroup="cardholderDate"
-          #cardholderDate="ngModelGroup">
-        </div>
-      -->
-
         <!-- date inputs  -->
         <div class="row">
           <div class="form-group-date">
             <label for="date"
                    class="body-m"> Exp. Date (MM/YY)</label>
+
             <!-- month input  -->
             <div class="input-group">
               <input type="text"
@@ -80,10 +74,11 @@
                      required
                      month
                      #month="ngModel"
-                     pattern="^[0-1][0-9]"
+                     pattern="0[1-9]|1[0-2]"
                      minlength="2"
                      maxlength="2"
                      (keyup)="addNewInfo(cardholder)">
+
               <!-- year input  -->
               <input type="text"
                      id="year"
@@ -100,6 +95,7 @@
                      (keyup)="addNewInfo(cardholder)">
             </div>
           </div>
+
           <!-- cc id input -->
           <div class="group-cid">
             <label for="cvc"
@@ -118,13 +114,13 @@
                    (keyup)="addNewInfo(cardholder)" />
           </div>
         </div>
-        <div *ngIf="!month.valid && month.touched"> <span class="help-block alert alert-danger">
+        <div *ngIf="!month.valid && month.touched"> <span class="help-block alert alert-danger body-s">
             Please enter a valid month
           </span><br></div>
-        <div *ngIf="!year.valid && year.touched"><span class="help-block alert alert-danger">
+        <div *ngIf="!year.valid && year.touched"><span class="help-block alert alert-danger body-s">
             Please enter a valid year
           </span><br></div>
-        <div *ngIf="!cid.valid && cid.touched"><span class="help-block alert alert-danger">
+        <div *ngIf="!cid.valid && cid.touched"><span class="help-block alert alert-danger body-s">
             Valid CVC is required
           </span></div>
 
@@ -138,17 +134,15 @@
   </div>
   <!-- display form confirmation screen -->
   <div *ngIf="submitted">
-    <section>
-      <!-- TO DO
-        => OPTIONAL move this to <app-confirmation></app-confirmation>
-      -->
+    <section class="confirm">
+      <!-- TO DO => OPTIONAL move this to <app-confirmation></app-confirmation>  -->
       <img src="../../../assets/images/icon-complete.svg" />
       <p class="heading-xl">
         Thank you!</p>
       <p class="heading-l">We've added your card details</p>
-      <button class="heading-l"
+      <button type="button"
+              class="heading-l"
               (click)="onFormReset()">Continue</button>
     </section>
-
   </div>
 </section>

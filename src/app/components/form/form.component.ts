@@ -1,16 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { FormGroup, NgForm } from '@angular/forms';
+import { NgForm, NgModel } from '@angular/forms';
 import { Card } from './card.model';
-
-export interface CardholderData {
-  name: string
-  number: string
-  // date: {
-  month: string
-  year: string
-  // },
-  cid: ''
-}
 
 @Component({
   selector: 'app-form',
@@ -18,58 +8,50 @@ export interface CardholderData {
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  /*
-    TO DO =>
-    - OPTIONAL - create date form group
-    - OPTIONAL - save form values to a collection/data structure
-    - OPTIONAL - reset when the cardholder clicks "Continue" navigate to confirmation component and back
-      - See
-        - hover,
-        - active, and
-        - focus states for interactive elements on the page
-      - OPTIONAL - add logo based on card type
-      - OPTIONAL - add animations
-      - fix favicon
-      - View the optimal layout depending on their device's screen size
-          - mobile
-          - tablet
-          - desktop
-    */
-
 
   @ViewChild('f', { static: false }) cardholderForm: NgForm;
   @Output() newFormEvent: EventEmitter<any> = new EventEmitter<any>();
   submitted = false;
 
-  constructor(){}
-  //1111222233334444
-  cardholder = {
+  /*
+  Pattern Validators
+  TO DO => Figure out format to add to input validators
+  */
+  namePattern = new RegExp("^[\w'\-,.]*[^_!¡?÷?¿\/\\+=@#$%ˆ&*(){}|~<>;:[\]]*$");
+  monthPattern = "0[1-9]|1[0-2]";
+  yearPattern = "[2][2-8]";
+  cidPattern = "^[0-9][0-9][0-9]";
+  /* Regex for Leading Card Networks */
+  cardAmexPattern = new RegExp("^[34|37][0-9]{14}$");
+  cardVisaPattern = new RegExp("^4[0-9]{6,}$");
+  cardMastercardPattern = new RegExp("(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}");
+  cardDiscoverPattern = new RegExp("^6011-?\d{4}-?\d{4}-?\d{4}$");
+  cardDinersclubPattern = new RegExp("(^30[0-5][0-9]{11}$)|(^(36|38)[0-9]{12}$)");
+  cardJCBPattern = new RegExp("(^3[0-9]{15}$)|(^(2131|1800)[0-9]{11}$)");
+  // cardDefaultPattern = "^[a-z0-9_-]{8,15}$";
+
+
+  constructor() { }
+
+  cardholder: Card = {
     name: '',
     number: '',
-    // date: {
     month: '',
     year: '',
-    // },
     cid: ''
   }
-  // currentCard: Card;
-  // cardCollection: Card[] = [];
 
-
+  cardCollection: Card[] = [];
 
   ngOnInit(): void {
     this.submitted = false;
-    // console.log(this.cardCollection);
   }
-addNewInfo(info: any){
-
-  this.newFormEvent.emit(info)
-
-}
+  addNewInfo(info: any) {
+    this.newFormEvent.emit(info)
+  }
 
   onSubmit() {
     this.submitted = true;
-    console.log(this.cardholder);
 
     /* extract form data */
     this.cardholder.name = this.cardholderForm.value.name;
@@ -78,20 +60,27 @@ addNewInfo(info: any){
     this.cardholder.year = this.cardholderForm.value.year;
     this.cardholder.cid = this.cardholderForm.value.cid;
 
-    console.log(this.cardholderForm.value.cardholderInfo);
-    // this.SaveCardDetails();
+    /* save card data */
+    this.saveNewCardDetails();
+    this.cardholder.name = '';
+    this.cardholder.number = '';
+    this.cardholder.month = '';
+    this.cardholder.year = '';
+    this.cardholder.cid = '';
+
+    /* clear card header data */
+    this.addNewInfo(this.cardholder)
+
   }
+
   onFormReset() {
     /* reset form */
     this.submitted = false;
     this.cardholderForm.reset();
   }
 
-  // saveNewCardDetails() {
-  //   this.currentCard = new Card(19, this.cardholder.name, this.cardholder.number, this.cardholder.month, this.cardholder.year, this.cardholder.cid);
-  //   this.newCard();
-  //   this.cardCollection.push(this.currentCard)
-  //   console.log(this.currentCard)
-  // }
+  saveNewCardDetails() {
+    this.cardCollection.push(this.cardholderForm.value.cardholderInfo)
+  }
 
 }

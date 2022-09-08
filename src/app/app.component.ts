@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { CardService } from './card.service';
-import { Card } from './components/form/card.model';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +7,7 @@ import { Card } from './components/form/card.model';
 })
 export class AppComponent implements OnInit {
   title = 'angular interactive card details form';
+
   currentCard = {
     currentName: '',
     currentNumber: '',
@@ -18,7 +16,9 @@ export class AppComponent implements OnInit {
     currentCID: '',
   }
 
-  constructor(private cardservice: CardService) { }
+  constructor(
+
+  ) { }
   ngOnInit() {
 
   }

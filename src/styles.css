@@ -1,38 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+/* global styles */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
-/*
 
-TO DO
-=> View the optimal layout depending on their device's screen size
-    - mobile
-    - tablet
-    - desktop
-
-*/
 * {
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
   font-weight: 500;
   margin: 0;
   padding: 0;
-  /* color: var(--very-dark-violet); */
 }
 
 :root {
-  --error-red: hsl(0, 100%, 66%);
   --active-border-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
   --neutral-white: hsl(0, 0%, 100%);
   --light-grayish-violet: hsl(270, 3%, 87%);
   --dark-grayish-violet: hsl(279, 6%, 55%);
   --very-dark-violet: hsl(278, 68%, 11%);
+  --error-red: hsl(0, 100%, 66%);
 }
 
 .body-s {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  /* color: var(--very-dark-violet); */
 }
 .body-m {
   font-weight: 500;
@@ -40,7 +30,6 @@ TO DO
   line-height: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  /* color: var(--very-dark-violet); */
 }
 .body-l {
   font-weight: 500;
@@ -72,7 +61,7 @@ button {
   color: var(--neutral-white);
   border-radius: 8px;
   padding: 10px auto;
-  margin: 25px auto;
+  margin: 15px 0 15px 0;
   border: none;
   cursor: pointer;
 }
@@ -87,12 +76,4 @@ button:disabled {
   background-color: #eee;
   color: #aaa;
 }
-/* # Front-end Style Guide
 
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
- */
