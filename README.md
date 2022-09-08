@@ -33,25 +33,39 @@ Users should be able to:
 ##
 ### Screenshots
 - <b> Mobile View @ `375px`</b>
+<br>
 <img src="./src/assets/screenshots/formMobileVisa.png" width="375" />
 
-- <b> Desktop View @ `1440px</b>
+
+
+- <b> Desktop View @ `1440px`</b>
   - <b> Initial Screen with empty form</b>
+
     <img src="./src/assets/screenshots/forminputempty.png" width="720" />
 
+
   - <b> Form with Invalid Inputs and Error Messages</b>
+
     <img src="./src/assets/screenshots/formInputInvalid.png" width="720" />
 
+
   - <b> Form with Dynamic Card Logo (Visa, Amex, MasterCard, Discover, or Default)</b>
+
     <img src="./src/assets/screenshots/formInputInvalidDisc.png" width="720" />
 
+
   - <b> Form with Valid Inputs</b>
+
     <img src="./src/assets/screenshots/formInputValid.png" width="720" />
 
+
   - <b> Form with Button Hover State</b>
+
     <img src="./src/assets/screenshots/formInputValidHover.png" width="720" />
 
+
   - <b> Completed Form Confirmation Screen</b>
+
     <img src="./src/assets/screenshots/formConfirm.png" width="720" />
 
 ##
