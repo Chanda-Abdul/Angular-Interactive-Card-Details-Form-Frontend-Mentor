@@ -136,19 +136,20 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 - 🙌🏾 <b> [Angular - The Complete Guide (2022 Edition) by Maximilian Schwarzmüller](https://www.udemy.com/course/the-complete-guide-to-angular-2) </b> - This is an amazing <b>[Udemy Course](https://www.udemy.com/)</b> which helped me finally understand Angular Forms. 10/10 would recommend to anyone still learning this concept.
 
-- 📜 <b> [Introduction to forms in Angular](https://angular.io/guide/forms-overview) </b> - The Documentation 🧐.
-  - 📜 <b> [Building a template-driven form](https://angular.io/guide/forms) </b> -  The Documentation 🧐.
-  - 📜 <b> [Reactive forms](https://angular.io/guide/reactive-forms) </b> -  The Documentation 🧐.
+- <b> [Introduction to forms in Angular](https://angular.io/guide/forms-overview) </b> - The Documentation 📜 .
+  - <b> [Building a template-driven form](https://angular.io/guide/forms) </b> -  The Documentation 📜 .
+  - <b> [Reactive forms](https://angular.io/guide/reactive-forms) </b> -  The Documentation 📜 .
 
-- 📜 <b> [Event binding](https://angular.io/guide/event-binding) </b> -  The Documentation 🧐. This was kind of useful.
-  - <b> [Angular 12 - Sharing data between child and parent components with `@Input` and `@Output` decorators.](https://youtu.be/qspoPXaF_Aw) </b> - Quick and easy Youtube explanation on sharing data in <b>Angular</b>. Very nice.
-  - 📜 <b> [Sharing data between child and parent directives and components](https://angular.io/guide/inputs-outputs) </b> - The Documentation 🧐.
+- <b> [Event binding](https://angular.io/guide/event-binding) </b> -  The Documentation 📜 . This was kind of useful.
+  - <b> [Angular 12 - Sharing data between child and parent components with `@Input` and `@Output` decorators.](https://youtu.be/qspoPXaF_Aw) </b> - Quick and easy 🎥 explanation on sharing data in <b>Angular</b>. Very nice.
+  - <b> [Sharing data between child and parent directives and components](https://angular.io/guide/inputs-outputs) </b> - The Documentation 📜 .
 
-- <b>[`*NgSwitch` Directive](https://angular.io/api/common/NgSwitch) </b> - The Documentation 🧐. This was actually helpful
+- <b>[`*NgSwitch` Directive](https://angular.io/api/common/NgSwitch) </b> - The Documentation 📜 . This was actually helpful
 
-- 📜 <b>[Pattern Validator](https://angular.io/api/forms/PatternValidator) </b> - The Documentation 🧐. 
-  - 🤓 <b> [Regex for Leading Card Networks](https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests) </b> - I enjoyed this and it was helpful.
-  - 🤓 <b>[Regular expression for first and last name](https://stackoverflow.com/questions/2385701/regular-expression-for-first-and-last-name) </b> - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- <b>[Pattern Validator](https://angular.io/api/forms/PatternValidator) </b> - The Documentation 📜 . 
+  - <b> [Regex for Leading Card Networks](https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests) </b> - Stack Overflow 🤓. I enjoyed this and it was helpful.
+  - <b> [Regular expression for first and last name](https://stackoverflow.com/questions/2385701/regular-expression-for-first-and-last-name) </b> - Stack Overflow 🤓.
+  <!-- This helped me for XYZ reason. I really liked this pattern and will use it going forward. -->
 
 
 ## Author
