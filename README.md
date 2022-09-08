@@ -33,15 +33,15 @@ Users should be able to:
 
 ### Screenshot
 #### Mobile View @ `375px`
-<img src="./src/assets/screenshots/formMobileVisa.png)" width="250" />
+<img src="./src/assets/screenshots/formMobileVisa.png" width="250" />
 
 #### Desktop View @ `1440px`
-<img src="./src/assets/screenshots/formConfirm.png)" width="500" />
-<img src="./src/assets/screenshots/forminputempty)" width="500" />
-<img src="./src/assets/screenshots/formInputInvalid.png)" width="500" />
-<img src="./src/assets/screenshots/formInputInvalidDisc.png)" width="500" />
-<img src="./src/assets/screenshots/formInputValid.png)" width="500" />
-<img src="./src/assets/screenshots/formInputValidHover.png)" width="500" />
+<img src="./src/assets/screenshots/formConfirm.png" width="500" />
+<img src="./src/assets/screenshots/forminputempty" width="500" />
+<img src="./src/assets/screenshots/formInputInvalid.png" width="500" />
+<img src="./src/assets/screenshots/formInputInvalidDisc.png" width="500" />
+<img src="./src/assets/screenshots/formInputValid.png" width="500" />
+<img src="./src/assets/screenshots/formInputValidHover.png" width="500" />
 
 
 
