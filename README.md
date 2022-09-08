@@ -75,9 +75,14 @@ Users should be able to:
   - <b>Mobile-first</b> workflow
 - Semantic <b>HTML5</b> markup
 - <b>Figma</b>
-<hr>
+##
 
 ### What I learned
+- forms
+- regex
+- credit card validation
+- event binding
+- dynamic loogo
 
 <!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
@@ -98,7 +103,7 @@ const proudOfThisFunc = () => {
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more. -->
-<hr>
+##
 
 ### Continued development
 
@@ -110,7 +115,7 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 - [ ] 🤷🏽‍♀️ add date `FormGroup`
 - [ ] 🤷🏽‍♀️ move confirmation screen functionality to `ConfirmationComponent`
-- [ ] 🤷🏽‍♀️ igure out formatting for `input` <b>Regex Form Validators</b>
+- [ ] 🤷🏽‍♀️ formatting for `input` <b>Regex Form Validators</b>
 
 ### Useful resources
 
@@ -141,8 +146,7 @@ This is where you can give a hat tip to anyone who helped you out on this projec
 <br>
 <br>
 <br>
-<br>
-<br>
+
 
 
 ###### #Angular #Template-Driven-Form #JavaScript #TypeScript #Validators #RegEx
