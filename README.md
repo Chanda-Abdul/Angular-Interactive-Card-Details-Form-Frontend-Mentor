@@ -36,13 +36,23 @@ Users should be able to:
 <img src="./src/assets/screenshots/formMobileVisa.png" width="375" />
 
 #### Desktop View @ `1440px`
+- Initial Screen with empty form
+  <img src="./src/assets/screenshots/forminputempty.png" width="720" />
 
-<img src="./src/assets/screenshots/forminputempty.png" width="720" />
-<img src="./src/assets/screenshots/formInputInvalid.png" width="720" />
-<img src="./src/assets/screenshots/formInputInvalidDisc.png" width="720" />
-<img src="./src/assets/screenshots/formInputValid.png" width="720" />
-<img src="./src/assets/screenshots/formInputValidHover.png" width="720" />
-<img src="./src/assets/screenshots/formConfirm.png" width="720" />
+- Form with Invalid Inputs and Error Messages
+  <img src="./src/assets/screenshots/formInputInvalid.png" width="720" />
+
+- Form with Dynamic Card Logo (Visa, Amex, MasterCard, Discover, or Default)
+  <img src="./src/assets/screenshots/formInputInvalidDisc.png" width="720" />
+
+- Form with Valid Inputs
+  <img src="./src/assets/screenshots/formInputValid.png" width="720" />
+
+- Form with Button Hover State
+  <img src="./src/assets/screenshots/formInputValidHover.png" width="720" />
+
+- Completed Form Confirmation Screen
+  <img src="./src/assets/screenshots/formConfirm.png" width="720" />
 
 
 
@@ -50,7 +60,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [View Solution Code](https://github.com/Chanda-Abdul/Angular-Interactive-Card-Details-Form-Frontend-Mentor)
-- Live Site URL: [View live site](#)
+- 🔜 <s>Live Site URL: [View live site](#)</s>
 
 ## My process
 
@@ -65,6 +75,7 @@ Users should be able to:
   - <b>Mobile-first</b> workflow
 - Semantic <b>HTML5</b> markup
 - <b>Figma</b>
+<hr>
 
 ### What I learned
 
@@ -87,12 +98,15 @@ const proudOfThisFunc = () => {
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more. -->
+<hr>
 
 ### Continued development
 
-
+#### Soon
 - [ ] 🔜 add animations
 - [ ] 🔜 Deploy
+
+#### Someday
 
 - [ ] 🤷🏽‍♀️ add date `FormGroup`
 - [ ] 🤷🏽‍♀️ move confirmation screen functionality to `ConfirmationComponent`
@@ -100,17 +114,18 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Useful resources
 
-- [Angular - The Complete Guide (2022 Edition) by Maximilian Schwarzmüller](https://www.udemy.com/course/the-complete-guide-to-angular-2) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Introduction to forms in Angular](https://angular.io/guide/forms-overview) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-  - [Building a template-driven form](https://angular.io/guide/forms) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-  - [Reactive forms](https://angular.io/guide/reactive-forms) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Sharing data between child and parent directives and components](https://angular.io/guide/inputs-outputs) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Event binding](https://angular.io/guide/event-binding) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-  - [Angular 12 - Sharing data between child and parent components with `@Input` and `@Output` decorators.](https://youtu.be/qspoPXaF_Aw) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [`*NgSwitch` Directive](https://angular.io/api/common/NgSwitch) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Pattern Validator](https://angular.io/api/forms/PatternValidator) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-  - [Regex for Leading Card Networks](https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-  - [Regular expression for first and last name](https://stackoverflow.com/questions/2385701/regular-expression-for-first-and-last-name) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- <b> [Angular - The Complete Guide (2022 Edition) by Maximilian Schwarzmüller](https://www.udemy.com/course/the-complete-guide-to-angular-2) </b> - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- <b> [Introduction to forms in Angular](https://angular.io/guide/forms-overview) </b> - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+  - <b> [Building a template-driven form](https://angular.io/guide/forms) </b> - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+  - <b> [Reactive forms](https://angular.io/guide/reactive-forms) </b> - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+
+- <b> [Event binding](https://angular.io/guide/event-binding) </b> - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+  - <b> [Angular 12 - Sharing data between child and parent components with `@Input` and `@Output` decorators.](https://youtu.be/qspoPXaF_Aw) </b> - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+  - <b> [Sharing data between child and parent directives and components](https://angular.io/guide/inputs-outputs) </b> - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- <b>[`*NgSwitch` Directive](https://angular.io/api/common/NgSwitch) </b> - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- <b>[Pattern Validator](https://angular.io/api/forms/PatternValidator) </b> - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+  - <b>[Regex for Leading Card Networks](https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests) </b> - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+  - <b>[Regular expression for first and last name](https://stackoverflow.com/questions/2385701/regular-expression-for-first-and-last-name) </b> - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 
 
 ## Author
@@ -122,7 +137,12 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 <!--
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit. -->
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 ###### #Angular #Template-Driven-Form #JavaScript #TypeScript #Validators #RegEx
