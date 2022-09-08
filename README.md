@@ -30,33 +30,31 @@ Users should be able to:
 - [X] Reset the form when the user clicks "Continue" on the completed state
 - [X] View the optimal layout depending on their device's screen size
 - [X] See hover, active, and focus states for interactive elements on the page
-
-### Screenshot
-#### Mobile View @ `375px`
+##
+### Screenshots
+- <b> Mobile View @ `375px`</b>
 <img src="./src/assets/screenshots/formMobileVisa.png" width="375" />
 
-#### Desktop View @ `1440px`
-- Initial Screen with empty form
-  <img src="./src/assets/screenshots/forminputempty.png" width="720" />
+- <b> Desktop View @ `1440px</b>
+  - <b> Initial Screen with empty form</b>
+    <img src="./src/assets/screenshots/forminputempty.png" width="720" />
 
-- Form with Invalid Inputs and Error Messages
-  <img src="./src/assets/screenshots/formInputInvalid.png" width="720" />
+  - <b> Form with Invalid Inputs and Error Messages</b>
+    <img src="./src/assets/screenshots/formInputInvalid.png" width="720" />
 
-- Form with Dynamic Card Logo (Visa, Amex, MasterCard, Discover, or Default)
-  <img src="./src/assets/screenshots/formInputInvalidDisc.png" width="720" />
+  - <b> Form with Dynamic Card Logo (Visa, Amex, MasterCard, Discover, or Default)</b>
+    <img src="./src/assets/screenshots/formInputInvalidDisc.png" width="720" />
 
-- Form with Valid Inputs
-  <img src="./src/assets/screenshots/formInputValid.png" width="720" />
+  - <b> Form with Valid Inputs</b>
+    <img src="./src/assets/screenshots/formInputValid.png" width="720" />
 
-- Form with Button Hover State
-  <img src="./src/assets/screenshots/formInputValidHover.png" width="720" />
+  - <b> Form with Button Hover State</b>
+    <img src="./src/assets/screenshots/formInputValidHover.png" width="720" />
 
-- Completed Form Confirmation Screen
-  <img src="./src/assets/screenshots/formConfirm.png" width="720" />
+  - <b> Completed Form Confirmation Screen</b>
+    <img src="./src/assets/screenshots/formConfirm.png" width="720" />
 
-
-
-
+##
 ### Links
 
 - Solution URL: [View Solution Code](https://github.com/Chanda-Abdul/Angular-Interactive-Card-Details-Form-Frontend-Mentor)
@@ -78,11 +76,13 @@ Users should be able to:
 ##
 
 ### What I learned
+🔜
+<!-- 
 - forms
 - regex
 - credit card validation
 - event binding
-- dynamic loogo
+- dynamic logos -->
 
 <!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
@@ -108,15 +108,16 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 ### Continued development
 
 #### Soon
-- [ ] 🔜 add animations
 - [ ] 🔜 Deploy
+- [ ] 🔜 add animations
+
 
 #### Someday
 
 - [ ] 🤷🏽‍♀️ add date `FormGroup`
 - [ ] 🤷🏽‍♀️ move confirmation screen functionality to `ConfirmationComponent`
 - [ ] 🤷🏽‍♀️ formatting for `input` <b>Regex Form Validators</b>
-
+#
 ### Useful resources
 
 - <b> [Angular - The Complete Guide (2022 Edition) by Maximilian Schwarzmüller](https://www.udemy.com/course/the-complete-guide-to-angular-2) </b> - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
