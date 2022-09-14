@@ -128,6 +128,7 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 #### Someday
 
+- [ ] Move functionality to a service
 - [ ] 🤷🏽‍♀️ add date `FormGroup`
 - [ ] 🤷🏽‍♀️ move confirmation screen functionality to `ConfirmationComponent`
 - [ ] 🤷🏽‍♀️ formatting for `input` <b>Regex Form Validators</b>
