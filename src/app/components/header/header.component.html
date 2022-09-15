@@ -1,23 +1,23 @@
 <div class="banner">
-  <div class="container">
+  <div class="container" >
 
-    <div class="card back">
+    <div class="card back" [@onInit]>
       <!-- display real-time user input for card security code -->
       <div class="cid">{{currentCard.currentCID || cid}}</div>
 
-      <div class="card front">
+      <div class="card front" [@onInit]>
         <!-- card logo based on first digit of input -->
         <div class="content"
              [ngSwitch]="currentCard.currentNumber.slice(0,1)">
 
           <!-- display visa logo -->
           <img src="../../../assets/images/visa.svg"
-               class="logo"
+               class="logo" alt="visa"
                *ngSwitchCase="'4'" />
 
           <!-- OR display amex logo logo -->
           <img src="../../../assets/images/american-express.svg"
-               class="logo"
+               class="logo"  alt="amex"
                *ngSwitchCase="'3'" />
 
           <!-- OR display mastercard logo -->
@@ -27,16 +27,16 @@
 
           <!-- OR display discover logo  -->
           <img src="../../../assets/images/discover-card.svg"
-               class="logo"
+               class="logo"  alt="discover"
                *ngSwitchCase="'6'" />
 
           <!-- OR display default logo -->
           <img src="../../../assets/images/card-logo.svg"
-               class="logo"
+               class="logo"  alt="card-logo"
                *ngSwitchDefault />
 
           <!-- display real-time user input for card number 4 numbers at a time -->
-          <div class="number">
+          <div class="number" [@onInit]>
             {{currentCard.currentNumber.slice(0,4)|| '0000'}}
             {{currentCard.currentNumber.slice(4,8)|| '0000'}}
             {{currentCard.currentNumber.slice(8,12)|| '0000'}}

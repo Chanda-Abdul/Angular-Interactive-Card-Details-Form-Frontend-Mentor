@@ -1,6 +1,7 @@
+@use '/src/variables';
+
 section {
-  display: flex;
-  flex-direction: column;
+  @include variables.flex-column;
   justify-content: center;
   align-items: center;
   height: 291px;
@@ -13,7 +14,8 @@ img {
   margin: 25px;
 }
 p.heading-l {
-  color: var(--dark-grayish-violet);
+  @include variables.heading-l;
+  color: variables.$dark-grayish-violet;
   margin: 10px;
 }
 button {

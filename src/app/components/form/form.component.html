@@ -10,8 +10,7 @@
 
         <!-- name input  -->
         <div class="form-group">
-          <label for="name"
-                 class="body-m">Cardholder Name</label>
+          <label for="name">Cardholder Name</label>
           <input type="text"
                  id="name"
                  class="control large heading-l"
@@ -24,13 +23,12 @@
                  pattern="^[\w'\-,.]*[^_!¡?÷?¿\/\\+=@#$%ˆ&*(){}|~<>;:[\]]*$"
                  (keyup)="addNewInfo(cardholder)">
           <span *ngIf="!name.valid && name.touched"
-                class="help-block alert alert-danger body-s">Name is required</span>
+                class="help-block alert alert-danger">Name is required</span>
         </div>
 
         <!-- card number input  -->
         <div class="form-group">
-          <label for="number"
-                 class="body-m">Card Number</label>
+          <label for="number" >Card Number</label>
           <input type="text"
                  id="number"
                  class="control large heading-l"
@@ -44,7 +42,7 @@
                  #number="ngModel"
                  (keyup)="addNewInfo(cardholder)">
           <span *ngIf="!number.valid && number.touched"
-                class="help-block alert alert-danger body-s">Please enter a Valid Card Number.<br> <i>Visa, Discover,
+                class="help-block alert alert-danger">Please enter a Valid Card Number.<br> <i>Visa, Discover,
               MasterCard, American
               Express, JCB or Diner's Club</i> <br></span>
         </div>
@@ -60,8 +58,7 @@
         <!-- date inputs  -->
         <div class="row">
           <div class="form-group-date">
-            <label for="date"
-                   class="body-m"> Exp. Date (MM/YY)</label>
+            <label for="date"> Exp. Date (MM/YY)</label>
 
             <!-- month input  -->
             <div class="input-group">
@@ -98,8 +95,7 @@
 
           <!-- cc id input -->
           <div class="group-cid">
-            <label for="cvc"
-                   class="body-m">CVC</label>
+            <label for="cvc">CVC</label>
             <input type="text"
                    class="control medium heading-l"
                    id="cid"
@@ -114,19 +110,18 @@
                    (keyup)="addNewInfo(cardholder)" />
           </div>
         </div>
-        <div *ngIf="!month.valid && month.touched"> <span class="help-block alert alert-danger body-s">
+        <div *ngIf="!month.valid && month.touched"> <span class="help-block alert alert-danger">
             Please enter a valid month
           </span><br></div>
-        <div *ngIf="!year.valid && year.touched"><span class="help-block alert alert-danger body-s">
+        <div *ngIf="!year.valid && year.touched"><span class="help-block alert alert-danger">
             Please enter a valid year
           </span><br></div>
-        <div *ngIf="!cid.valid && cid.touched"><span class="help-block alert alert-danger body-s">
+        <div *ngIf="!cid.valid && cid.touched"><span class="help-block alert alert-danger">
             Valid CVC is required
           </span></div>
 
       </div>
       <button type="submit"
-              class="heading-l"
               [disabled]="!f.valid">
         Confirm
       </button>
@@ -136,12 +131,11 @@
   <div *ngIf="submitted">
     <section class="confirm">
       <!-- TO DO => OPTIONAL move this to <app-confirmation></app-confirmation>  -->
-      <img src="../../../assets/images/icon-complete.svg" />
-      <p class="heading-xl">
-        Thank you!</p>
-      <p class="heading-l">We've added your card details</p>
+      <img src="../../../assets/images/icon-complete.svg"  alt="complete"/>
+      <h2>
+        Thank you!</h2>
+      <p>We've added your card details</p>
       <button type="button"
-              class="heading-l"
               (click)="onFormReset()">Continue</button>
     </section>
   </div>

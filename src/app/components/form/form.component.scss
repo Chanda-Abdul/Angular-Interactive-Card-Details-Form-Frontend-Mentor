@@ -1,7 +1,10 @@
+@use '/src/variables';
+
 section {
   margin-top: 100px;
   width: 100%;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -12,21 +15,24 @@ form {
   width: 327px;
 }
 label {
+  @include variables.body-m;
   margin-top: 20px;
   padding: 5px;
-  color: var(--very-dark-violet);
+  color: variables.$very-dark-violet;
   padding-top: 30px;
 }
+
 input {
   border-radius: 8px;
-  background: var(--neutral-white);
-  border: 1px solid var(--light-grayish-violet);
+  background: variables.$neutral-white;
+  border: 1px solid variables.$light-grayish-violet;
   padding: 0 2px;
 }
 
 .control {
   margin: 10px auto 15px auto;
 }
+
 .control.large {
   padding: 0 0 0 10px;
   height: 45px;
@@ -45,7 +51,7 @@ input {
   width: 52px;
 }
 .group-date {
-  width: 152px;
+ width: 152px;
 }
 .group-cid {
   width: 164px;
@@ -57,41 +63,48 @@ input {
 }
 span{
   margin: 5px 0;
+  @include variables.body-s;
 }
 input:focus {
-  border-color: #42a948;
+  border-color: variables.$valid-green;
   outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px variables.$very-dark-violet,0 0 8px variables.$light-grayish-violet;
 }
+
 .ng-valid[required],
 .ng-valid.required {
-  border-left: 2px solid #42a948;
+  border-left: 2px solid variables.$valid-green;
 }
 
 input.ng-invalid.ng-touched {
-  border-color: var(--error-red);
-  border: 1px solid var(--error-red);
+  border-color: variables.$error-red;
+  border: 1px solid variables.$error-red;
   outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px variables.$very-dark-violet,0 0 8px variables.$light-grayish-violet;
 }
 
 /* confirmation */
 .confirm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include variables.flex-column;
   align-items: center;
   min-height: 291px;
   width: 100%;
   margin: 50px 0;
 }
+
+.confirm p{
+  @include variables.heading-l;
+}
+
 img {
   height: 80px;
   width: 80px;
   margin: 25px;
 }
-p.heading-l {
-  color: var(--dark-grayish-violet);
+
+p{
+  @include variables.heading-l;
+  color: variables.$dark-grayish-violet;
   margin: 10px;
 }
 

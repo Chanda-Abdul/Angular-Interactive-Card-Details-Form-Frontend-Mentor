@@ -122,7 +122,7 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 ### Continued development
 
 #### Soon
-- [ ] 🔜 Deploy
+- [X] 🔜 Deploy
 - [ ] 🔜 add animations
 
 
@@ -132,6 +132,7 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 - [ ] 🤷🏽‍♀️ add date `FormGroup`
 - [ ] 🤷🏽‍♀️ move confirmation screen functionality to `ConfirmationComponent`
 - [ ] 🤷🏽‍♀️ formatting for `input` <b>Regex Form Validators</b>
+<!-- https://stackoverflow.com/questions/25101781/javascript-regex-split-credit-card-numbers -->
 #
 ### Useful resources
 

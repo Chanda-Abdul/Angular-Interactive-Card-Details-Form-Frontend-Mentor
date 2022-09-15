@@ -1,7 +1,7 @@
-.container{
-display: flex;
-flex-direction: column;
-justify-content: center;
+@use '../variables';
+
+.container {
+  @include variables.flex-column;
 }
 
 app-footer {
@@ -13,19 +13,19 @@ app-footer {
 
 /* Desktop Media Queries */
 @media screen and (min-width: 1175px) {
-  .container{
-    flex-direction: row;
-    align-items: center;
+  .container {
+    @include variables.flex-row;
     justify-content: flex-start;
     width: 100%;
   }
 
-  app-form{
+  app-form {
     position: absolute;
     left: 800px;
     top: 200px;
 
   }
+
   app-footer {
     margin: 5px 0 5px auto;
     position: fixed;

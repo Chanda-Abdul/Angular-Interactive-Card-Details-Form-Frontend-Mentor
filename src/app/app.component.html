@@ -3,8 +3,8 @@
   <app-header [currentCard]="currentCard"></app-header>
   <div class='right'>
 
-    <app-form (newFormEvent)="addNewInfo($event)"></app-form>
-    
+    <app-form (newFormEvent)="addNewInfo($event)" [@onInit]></app-form>
+
   </div>
 </div>
 

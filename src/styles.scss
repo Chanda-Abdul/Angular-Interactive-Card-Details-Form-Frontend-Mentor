@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@use './variables.scss';
+
+* {
+  font-family: variables.$global-font;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+
+}
+
+.alert {
+  color: variables.$error-red;
+}
+h1, h2{
+  @include variables.heading-xl;
+}
+
+button {
+  @include variables.heading-l;
+  height: 53px;
+  width: 337px;
+  background-color: variables.$very-dark-violet;
+  color: variables.$neutral-white;
+  border-radius: 8px;
+  padding: 10px auto;
+  margin: 15px 0 15px 0;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px 0px variables.$dark-grayish-violet;
+
+}
+
+
+
+button:hover {
+  background-color: variables.$dark-grayish-violet;
+  color: variables.$very-dark-violet;
+}
+
+button:disabled {
+  background-color: variables.$light-grayish-violet;
+  color: variables.$very-dark-violet;
+  }
