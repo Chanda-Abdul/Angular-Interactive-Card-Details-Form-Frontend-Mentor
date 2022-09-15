@@ -72,7 +72,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [View Solution Code](https://github.com/Chanda-Abdul/Angular-Interactive-Card-Details-Form-Frontend-Mentor)
-- 🔜 <s>Live Site URL: [View live site](#)</s>
+- Live Site URL: [View live site](https://stalwart-twilight-d769cf.netlify.app/)
 
 ## My process
 
