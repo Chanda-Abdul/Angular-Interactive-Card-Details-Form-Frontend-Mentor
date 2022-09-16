@@ -1,6 +1,7 @@
 $global-font: 'Space Grotesk', sans-serif;
 
-$active-border-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+$active-border-gradient-from: hsl(249, 99%, 64%);
+$active-border-gradient-to: hsl(278, 94%, 30%);
 $neutral-white: hsl(0, 0%, 100%);
 $light-grayish-violet: hsl(270, 3%, 87%);
 $dark-grayish-violet: hsl(279, 6%, 55%);
@@ -54,12 +55,12 @@ font-family: $global-font;
 }
 
 @mixin heading-xl {
+  font-family: $global-font;
   font-weight: 500;
   font-size: 28px;
   line-height: 36px;
   text-transform: uppercase;
   letter-spacing: 3.4px;
   text-align: center;
-  letter-spacing: 3.4px;
-  color: $very-dark-violet;
+  color: $neutral-white;
 }

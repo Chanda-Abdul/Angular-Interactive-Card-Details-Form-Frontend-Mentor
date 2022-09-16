@@ -14,6 +14,7 @@ form {
   margin: 25px auto;
   width: 327px;
 }
+
 label {
   @include variables.body-m;
   margin-top: 20px;
@@ -25,7 +26,9 @@ label {
 input {
   border-radius: 8px;
   background: variables.$neutral-white;
-  border: 1px solid variables.$light-grayish-violet;
+  // border: linear-gradient(21deg, #10abff, #1beabd);
+
+  border: 2px solid variables.$dark-grayish-violet;
   padding: 0 2px;
 }
 
@@ -38,62 +41,85 @@ input {
   height: 45px;
   width: 327px;
 }
+
 .control.medium {
   padding: 0 0 0 10px;
   height: 45px;
   width: 164px;
   border-radius: 8px;
 }
+
 .control.small {
   padding: 0 0 0 10px;
   margin: 10px 15px 15px 0;
   height: 45px;
   width: 52px;
 }
+
 .group-date {
- width: 152px;
+  width: 152px;
 }
+
 .group-cid {
   width: 164px;
 }
+
 .row {
   display: flex;
   justify-content: space-between;
   width: 327px;
 }
-span{
+
+span {
   margin: 5px 0;
   @include variables.body-s;
 }
+
 input:focus {
-  border-color: variables.$valid-green;
   outline: 0;
-  box-shadow: inset 0 1px 1px variables.$very-dark-violet,0 0 8px variables.$light-grayish-violet;
+  box-shadow: inset 0 2px 6px 0 variables.$valid-green;
+  border-color: variables.$valid-green;
+  opacity: .25;
 }
 
 .ng-valid[required],
 .ng-valid.required {
-  border-left: 2px solid variables.$valid-green;
+  outline: 0;
+  box-shadow: inset 0 2px 3px 1px variables.$active-border-gradient-from, 0 0 8px variables.$active-border-gradient-to;
+  border-color: variables.$active-border-gradient-to;
+  opacity: .25;
+  border: 2px solid variables.$active-border-gradient-to;
+}
+
+input.ng-invalid.ng-untouched {
+  opacity: 0.25;
 }
 
 input.ng-invalid.ng-touched {
   border-color: variables.$error-red;
-  border: 1px solid variables.$error-red;
+  border: 2px solid variables.$error-red;
   outline: 0;
-  box-shadow: inset 0 1px 1px variables.$very-dark-violet,0 0 8px variables.$light-grayish-violet;
+  opacity: 0.25;
+  box-shadow: inset 0 2px 3px variables.$error-red, 0 0 8px variables.$error-red;
 }
 
 /* confirmation */
 .confirm {
   @include variables.flex-column;
   align-items: center;
+  justify-content: space-between;
   min-height: 291px;
   width: 100%;
   margin: 50px 0;
 }
-
-.confirm p{
+.confirm h2 {
+  @include variables.heading-xl;
+  color: variables.$very-dark-violet;
+  padding-bottom: 10px;
+}
+.confirm p {
   @include variables.heading-l;
+  padding-bottom: 15px;
 }
 
 img {
@@ -102,10 +128,8 @@ img {
   margin: 25px;
 }
 
-p{
+p {
   @include variables.heading-l;
   color: variables.$dark-grayish-violet;
   margin: 10px;
 }
-
-

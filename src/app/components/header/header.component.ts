@@ -45,10 +45,10 @@ export class HeaderComponent implements OnInit {
   @Input() currentCard;
 
   name: string = 'Jane Appleseed';
-  cid: string = '123';
+  cid: string = '000';
   number: any = ['9876', '1234', '5544', '6543'];
-  month: string = '09';
-  year: string = '22';
+  month: string = '00';
+  year: string = '00';
 
   logo = '';
 

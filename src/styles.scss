@@ -37,9 +37,12 @@ button {
 button:hover {
   background-color: variables.$dark-grayish-violet;
   color: variables.$very-dark-violet;
+
 }
 
 button:disabled {
   background-color: variables.$light-grayish-violet;
-  color: variables.$very-dark-violet;
+  opacity: 0.75;
+  color: variables.$dark-grayish-violet;
+  box-shadow: 0px 2px 3px 0px variables.$light-grayish-violet
   }

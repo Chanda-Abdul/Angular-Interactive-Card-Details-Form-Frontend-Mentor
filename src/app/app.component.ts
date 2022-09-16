@@ -15,14 +15,14 @@ import { Component, OnInit } from '@angular/core';
         transition('void => *', [
           style({
             opacity: 0,
-            transform: 'translateX(-100px)'
+            transform: 'translateX(25vh)'
           }),
-          animate(300),
+          animate('1s 200ms ease-in'),
         ]),
         transition('* => void', [
-          animate(300, style({
+          animate('1s 200ms ease-out', style({
             opacity: 0,
-            transform: 'translateX(100px)'
+            transform: 'translateX(25vh)'
           }),
           ),
         ])

@@ -83,7 +83,7 @@ Users should be able to:
   - [TypeScript](https://www.typescriptlang.org/)
   - [JavaScript](https://www.javascript.com/)
     - [Regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- <b>CSS</b> custom properties
+- <b>Sass &  CSS</b> custom properties
   - <b>Mobile-first</b> workflow
 - Semantic <b>HTML5</b> markup
 - <b>Figma</b>
