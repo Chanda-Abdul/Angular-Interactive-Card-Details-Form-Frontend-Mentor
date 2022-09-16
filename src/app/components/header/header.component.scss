@@ -66,15 +66,16 @@
 }
 
 .customer {
-  // @include variables.body-m;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
 }
-.number{
-  @include variables.heading-xl;
+
+.number {
+  @include variables.heading-l;
+  margin-bottom: 0;
 }
 
 .name,
@@ -134,7 +135,7 @@
   }
 
   .number {
-
+    @include variables.heading-xl;
     height: 36px;
     width: 372px;
     left: 32px;
@@ -143,6 +144,7 @@
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 3px;
+    text-align: start;
   }
 
   .name,
